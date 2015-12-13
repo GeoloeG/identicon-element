@@ -1,0 +1,43 @@
+{
+  "name": "identicon-element",
+  "version": "0.8.0",
+  "authors": [
+    "Pascal Gula aka MeTaNoV"
+  ],
+  "description": "Element wrapper for the jdenticon library",
+  "keywords": [
+    "web-components",
+    "web",
+    "component",
+    "custom",
+    "element",
+    "polymer",
+    "jdenticon",
+    "identicon",
+    "container",
+    "wrapper"
+  ],
+  "main": "identicon-element.html",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/´MeTaNoV/identicon-element.git"
+  },
+  "license": "https://polymer.github.io/LICENSE.txt",
+  "homepage": "https://metanov.github.io/identicon-element/",
+  "ignore": [],
+  "dependencies": {
+    "polymer": "Polymer/polymer#^1.1.0",
+    "jdenticon": "dmester/jdenticon#^1.3.0"
+  },
+  "devDependencies": {
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^0.7.0",
+    "web-component-tester": "^3.4.0",
+    "iron-component-page": "PolymerElements/iron-component-page#^1.0.0",
+    "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
+    "iron-test-helpers": "PolymerElements/iron-test-helpers#^1.0.0",
+    "paper-input": "PolymerElements/paper-input#^1.0.0",
+    "paper-button": "PolymerElements/paper-button#^1.0.0"
+  },
+  "ignore": []
+}
