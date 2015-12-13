@@ -1,63 +1,46 @@
+[![Bower version](https://badge.fury.io/bo/identicon-element.svg)](https://badge.fury.io/bo/identicon-element)
+[![Build Status](https://travis-ci.org/MeTaNoV/identicon-element.svg?branch=master)](https://travis-ci.org/MeTaNoV/identicon-element)
+[![Dependency Status](https://gemnasium.com/MeTaNoV/identicon-element.svg)](https://gemnasium.com/MeTaNoV/identicon-element)
 
-<!---
+## Demo
 
-This README is automatically generated from the comments in these files:
-marked-element.html
+[https://metanov.github.io/identicon-element/](https://metanov.github.io/gold-password-input/components/identicon-element/demo/)
 
-Edit those files, and our readme bot will duplicate them over here!
-Edit this file, and the bot will squash your changes :)
+## Install
 
--->
+Install the component using [Bower](http://bower.io/):
 
+```sh
+$ bower install identicon-element --save
+```
 
-##&lt;marked-element&gt;
+## Usage
 
+Import Custom Element:
 
-Element wrapper for the [marked](https://github.com/chjj/marked) library.
+```html
+<link rel="import" href="bower_components/identicon-element/identicon-element.html">
+```
 
-`<marked-element>` accepts Markdown source, and renders it to a child
-element with the class `markdown-html`. This child element can be styled
-as you would a normal DOM element. If you do not provide a child element
-with the `markdown-html` class, the Markdown source will still be rendered,
-but to a shadow DOM child that cannot be styled.
+And then use it:
 
-The Markdown source can be specified either via the `markdown` attribute:
+```html
+<identicon-element width="100" height="100" hash="9ADBF2ae48dc6FD6"></identicon-element>
+```
 
-    <marked-element markdown="`Markdown` is _awesome_!">
-      <div class="markdown-html"></div>
-    </marked-element>
+See the [Documentation](https://metanov.github.io/identicon-element/) for more options.
 
-Or, you can provide it via a `<script type="text/markdown">` element child:
+## Contributing
 
-    <marked-element>
-      <div class="markdown-html"></div>
-      <script type="text/markdown">
-        Check out my markdown!
+1. Fork it!
+2. Create your feature branch: `git checkout -b my-new-feature`
+3. Commit your changes: `git commit -m 'Add some feature'`
+4. Push to the branch: `git push origin my-new-feature`
+5. Submit a pull request :D
 
-        We can even embed elements without fear of the HTML parser mucking up their
-        textual representation:
+## License
 
-        ```html
-        <awesome-sauce>
-          <div>Oops, I'm about to forget to close this div.
-        </awesome-sauce>
-        ```
-      </script>
-    </marked-element>
+[MIT License](http://opensource.org/licenses/MIT) © Pascal Gula
 
-Note that the `<script type="text/markdown">` approach is _static_. Changes to
-the script content will _not_ update the rendered markdown!
-
-### Styling
-If you are using a child with the `markdown-html` class, you can style it
-as you would a regular DOM element:
-
-    .markdown-html p {
-      color: red;
-    }
-
-    .markdown-html td:first-child {
-      padding-left: 24px;
-    }
-
+[![Throughput Graph](https://graphs.waffle.io/MeTaNoV/identicon-element/throughput.svg)](https://waffle.io/MeTaNoV/identicon-element/metrics)
 
