@@ -18,7 +18,7 @@
     "wrapper"
   ],
   "main": "identicon-element.html",
-  "private": true,
+  "private": false,
   "repository": {
     "type": "git",
     "url": "git://github.com/´MeTaNoV/identicon-element.git"
