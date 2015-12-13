@@ -2,6 +2,8 @@
 [![Build Status](https://travis-ci.org/MeTaNoV/identicon-element.svg?branch=master)](https://travis-ci.org/MeTaNoV/identicon-element)
 [![Dependency Status](https://gemnasium.com/MeTaNoV/identicon-element.svg)](https://gemnasium.com/MeTaNoV/identicon-element)
 
+`<identicon-element>` is an identicon generator based on [jdenticon](https://jdenticon.com/).
+
 ## Demo
 
 [https://metanov.github.io/identicon-element/](https://metanov.github.io/identicon-element/components/identicon-element/demo/)
