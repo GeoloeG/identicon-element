@@ -27,7 +27,7 @@ Import Custom Element:
 And then use it:
 
 ```html
-<identicon-element width="100" height="100" hash="9ADBF2ae48dc6FD6"></identicon-element>
+<identicon-element size="100" seed="Polymer Rocks"></identicon-element>
 ```
 
 See the [Documentation](https://metanov.github.io/identicon-element/) for more options.

@@ -3,7 +3,7 @@
 <link rel="import" href="identicon-import.html">
 
 <!--
-`<identicon-element>` is an identicon generator based on [jdenticon](https://jdenticon.com/).
+`<identicon-element>` is a beautiful identicon generator based on [jdenticon](https://jdenticon.com/).
 
 ### Styling
 
@@ -11,8 +11,6 @@ The following mixin is available for styling:
 
 Custom property | Description | Default
 ----------------|-------------|----------
-`--identicon-element-width` | The width of the identicon  | `auto`
-`--identicon-element-height` | The height of the identicon  | `auto`
 `--identicon-element` | Mixin applied to the element | `{}`
 
 @group MoleculeElements Elements
@@ -31,7 +29,7 @@ Custom property | Description | Default
 
     </style>
 
-    <svg id="svg" width$="[[width]]" height$="[[height]]" data-jdenticon-hash$="[[hash]]">
+    <svg id="svg" width$="[[size]]" height$="[[size]]" data-jdenticon-hash$="[[_hash]]">
         <!-- Fallback text for browsers not supporting inline svg -->
         <content></content>
     </svg>
@@ -53,32 +51,36 @@ Custom property | Description | Default
 
         properties: {
           /**
-           * Specifies the width of the SVG.
+           * Specifies the seed of the hash of the identicon to be rendered.
            */
-          width: {
-            type: Number,
+          seed: {
+            type: String,
+            observer: "_hashChanged"
           },
           /**
-           * Specifies the height of the SVG.
+           * Specifies the width and height of the SVG.
            */
-          height: {
+          size: {
             type: Number,
+            value: 45
           },
-          //TODO PG: the hash must be 11 hex character minimum, check that...
           /**
            * Specifies the hash of the identicon to be rendered.
            */
-          hash: {
+          _hash: {
             type: String,
-            observer: "_hashChanged"
-          }
+            computed: "_computeHash(seed)"
+          },
         },
 
         attached: function() {
-          jdenticon.update(this.$.svg, this.hash);
+          jdenticon.update(this.$.svg, this._hash);
         },
         _hashChanged: function() {
-          jdenticon.update(this.$.svg, this.hash);
+          jdenticon.update(this.$.svg, this._hash);
+        },
+        _computeHash: function(seed) {
+          return md5(seed);
         }
       });
     }());

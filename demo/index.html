@@ -55,17 +55,16 @@
 
       <h3>Sample Identicon</h3>
       <section>
-        <identicon-element width="45" height="45" hash="ca693a8ccfa2cd3464d532afdfab31c5"></identicon-element>
-        <identicon-element width="100" height="100" hash="472671569bbb4cb6e336da5ab82c1ce4"></identicon-element>
-        <identicon-element width="250" height="250" hash="6aecef1351fffba23f19e9148f2cf912"></identicon-element>
+        <identicon-element seed="identicon"></identicon-element>
+        <identicon-element size="100" seed="polymer"></identicon-element>
+        <identicon-element size="250" seed="element"></identicon-element>
       </section>
 
-      <h3>Dynamic Identicon</h3>
+      <h3>Generated Identicon</h3>
       <section>
-        <!-- TODO PG: add constraint on the hash value -->
-        <paper-button id="hashButton" on-tap="generateHash" raised>Generate!</paper-button>
-        <paper-input id="hashInput" label="Min. 11 characters Hash value" value="{{hash}}"></paper-input>
-        <identicon-element width="100" height="100" hash="[[hash]]"></identicon-element>
+        <paper-button id="seedButton" on-tap="generateSeed" raised>Generate!</paper-button>
+        <paper-input id="seedInput" label="Entre a string!" value="{{seed}}"></paper-input>
+        <identicon-element size="100" seed="[[seed]]"></identicon-element>
       </section>
 
 <!--       <h3>Configurable Identicon</h3>
@@ -78,16 +77,16 @@
   <script>
     addEventListener('WebComponentsReady', function() {
       var t = document.querySelector("#t");
-      var hashInput = document.querySelector("#hashInput");
-      var allowedChar = "0123456789ABCDEFabcdef";
-      t.generateHash = function() {
+      var seedInput = document.querySelector("#seedInput");
+      var allowedChar = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+      t.generateSeed = function() {
         var hashValue = "";
         for( var i = 0; i < 16; i++ ) {
           hashValue += allowedChar.charAt(Math.floor(Math.random() * allowedChar.length));          
         }
-        hashInput.value = hashValue;
+        seedInput.value = hashValue;
       };
-      t.generateHash();
+      t.generateSeed();
     });
   </script>
 
