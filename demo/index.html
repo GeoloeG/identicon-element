@@ -53,6 +53,8 @@
     <div class="vertical-section vertical-section-container centered">
       <h1>&lt;identicon-element&gt;</h1>
 
+      <!-- TODO PG: add demo stuff from Monica -->
+
       <h3>Sample Identicon</h3>
       <section>
         <identicon-element seed="identicon"></identicon-element>
@@ -63,7 +65,7 @@
       <h3>Generated Identicon</h3>
       <section>
         <paper-button id="seedButton" on-tap="generateSeed" raised>Generate!</paper-button>
-        <paper-input id="seedInput" label="Entre a string!" value="{{seed}}"></paper-input>
+        <paper-input id="seedInput" label="Enter a string!" value="{{seed}}"></paper-input>
         <identicon-element size="100" seed="[[seed]]"></identicon-element>
       </section>
 
