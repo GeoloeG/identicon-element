@@ -4,7 +4,7 @@
 
 ## Demo
 
-[https://metanov.github.io/identicon-element/](https://metanov.github.io/gold-password-input/components/identicon-element/demo/)
+[https://metanov.github.io/identicon-element/](https://metanov.github.io/identicon-element/components/identicon-element/demo/)
 
 ## Install
 
