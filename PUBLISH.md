@@ -1,6 +1,6 @@
 ## Registering to Bower
 
-`bower register gold-password-input git://github.com/MeTaNoV/gold-password-input.git`
+`bower register identicon-element git://github.com/MeTaNoV/identicon-element.git`
 
 ## Deploying to Github Pages
 
