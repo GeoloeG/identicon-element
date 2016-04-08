@@ -1,6 +1,6 @@
 {
   "name": "identicon-element",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "authors": [
     "Pascal Gula aka MeTaNoV <pascal.gula@gmail.com>"
   ],
@@ -42,7 +42,7 @@
     "iron-demo-helpers": "PolymerElements/iron-demo-helpers#^1.0.0",
     "paper-input": "PolymerElements/paper-input#^1.0.0",
     "paper-button": "PolymerElements/paper-button#^1.0.0",
-    "web-component-tester": "^3.4.0",
-    "iron-test-helpers": "PolymerElements/iron-test-helpers#^1.0.0"
+    "iron-test-helpers": "PolymerElements/iron-test-helpers#^1.0.0",
+    "web-component-tester": "^4.0.0"
   }
 }
