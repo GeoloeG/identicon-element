@@ -1,6 +1,6 @@
 {
   "name": "identicon-element",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "authors": [
     "Pascal Gula aka MeTaNoV <pascal.gula@gmail.com>"
   ],
@@ -23,10 +23,10 @@
   "private": false,
   "repository": {
     "type": "git",
-    "url": "git://github.com/MeTaNoV/identicon-element.git"
+    "url": "git://github.com/GeoloeG/identicon-element.git"
   },
   "license": "MIT",
-  "homepage": "https://metanov.github.io/identicon-element/",
+  "homepage": "https://geoloeg.github.io/identicon-element/",
   "ignore": [
     "/.*",
     "/test/",
