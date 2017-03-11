@@ -1,12 +1,10 @@
-[![Bower version](https://badge.fury.io/bo/identicon-element.svg)](https://badge.fury.io/bo/identicon-element)
-[![Build Status](https://travis-ci.org/MeTaNoV/identicon-element.svg?branch=master)](https://travis-ci.org/MeTaNoV/identicon-element)
-[![Dependency Status](https://gemnasium.com/MeTaNoV/identicon-element.svg)](https://gemnasium.com/MeTaNoV/identicon-element)
+[![Published on webcomponents.org](https://img.shields.io/badge/webcomponents.org-published-blue.svg?style=flat-square)](https://www.webcomponents.org/element/GeoloeG/identicon-element)
+
+# `<identicon-element>`
+
+## Descripton
 
 `<identicon-element>` is an identicon generator based on [jdenticon](https://jdenticon.com/).
-
-## Demo
-
-[https://metanov.github.io/identicon-element/](https://metanov.github.io/identicon-element/components/identicon-element/demo/)
 
 ## Install
 
@@ -26,11 +24,29 @@ Import Custom Element:
 
 And then use it:
 
+<!---
+```
+<custom-element-demo>
+  <template>
+    <link rel="import" href="identicon-element.html">
+	  <next-code-block></next-code-block>
+  </template>
+</custom-element-demo>
+```
+-->
 ```html
 <identicon-element size="100" seed="Polymer Rocks"></identicon-element>
 ```
 
-See the [Documentation](https://metanov.github.io/identicon-element/) for more options.
+See the [Documentation](https://geoloeg.github.io/identicon-element/) for more options.
+
+## More Demos
+
+[https://geoloeg.github.io/identicon-element/](https://geoloeg.github.io/identicon-element/components/identicon-element/demo/)
+
+## Discussing
+
+If you have any questions, you can find me on the [Polymer Slack Channel](https://polymer.slack.com/), or just raise an Issue.
 
 ## Contributing
 
@@ -39,10 +55,3 @@ See the [Documentation](https://metanov.github.io/identicon-element/) for more o
 3. Commit your changes: `git commit -m 'Add some feature'`
 4. Push to the branch: `git push origin my-new-feature`
 5. Submit a pull request :D
-
-## License
-
-[MIT License](http://opensource.org/licenses/MIT) © Pascal Gula
-
-[![Throughput Graph](https://graphs.waffle.io/MeTaNoV/identicon-element/throughput.svg)](https://waffle.io/MeTaNoV/identicon-element/metrics)
-
