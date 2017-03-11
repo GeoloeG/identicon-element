@@ -1,0 +1,32 @@
+{
+  "name": "Jdenticon",
+  "authors": [
+    "Daniel Mester Pirttijärvi"
+  ],
+  "description": "Javascript identicon generator",
+  "main": "dist/jdenticon.js",
+  "keywords": [
+    "javascript",
+    "identicon",
+    "avatar",
+    "library"
+  ],
+  "license": "zlib",
+  "homepage": "http://jdenticon.com/",
+  "ignore": [
+    "/jdenticon.js",
+    ".npmignore",
+    ".gitignore",
+    ".vs",
+    "*.bat",
+    "*.nuspec",
+    "bin",
+    "gulpfile.js",
+    "node_modules",
+    "obj",
+    "releases",
+    "src",
+    "template.*",
+    "utils"
+  ]
+}

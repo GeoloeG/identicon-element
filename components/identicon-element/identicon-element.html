@@ -1,0 +1,95 @@
+<link rel="import" href="../polymer/polymer.html">
+
+<link rel="import" href="identicon-import.html">
+
+<!--
+`<identicon-element>` is a beautiful identicon generator based on [jdenticon](https://jdenticon.com/).
+
+Simply use it like this:
+
+```html
+<identicon-element size="100" seed="Polymer Rocks"></identicon-element>
+```
+
+### Styling
+
+The following mixin is available for styling:
+
+Custom property | Description | Default
+----------------|-------------|----------
+`--identicon-element` | Mixin applied to the element | `{}`
+
+@group MoleculeElements Elements
+@element identicon-element
+@hero hero.svg
+@demo demo/index.html
+-->
+<dom-module id="identicon-element">
+  <template>
+    <style>
+      :host {
+        display: inline-block;
+
+        @apply --identicon-element;
+      }
+
+    </style>
+
+    <svg id="svg" width$="[[size]]" height$="[[size]]" data-jdenticon-hash$="[[_hash]]">
+        <!-- Fallback text for browsers not supporting inline svg -->
+        <content></content>
+    </svg>
+
+  </template>
+  <script>
+    (function() {
+      // TODO PG: add this to the config of the component
+      var jdenticon_config = {
+          lightness: {
+              color: [0.4, 0.8],
+              grayscale: [0.3, 0.9]
+          },
+          saturation: 0.5
+      };
+
+      Polymer({
+        is: 'identicon-element',
+
+        properties: {
+          /**
+           * Specifies the seed of the hash of the identicon to be rendered.
+           */
+          seed: {
+            type: String,
+            observer: "_hashChanged"
+          },
+          /**
+           * Specifies the width and height of the SVG.
+           */
+          size: {
+            type: Number,
+            value: 45
+          },
+          /**
+           * Specifies the hash of the identicon to be rendered.
+           */
+          _hash: {
+            type: String,
+            computed: "_computeHash(seed)"
+          },
+        },
+
+        attached: function() {
+          jdenticon.update(this.$.svg, this._hash);
+        },
+        _hashChanged: function() {
+          jdenticon.update(this.$.svg, this._hash);
+        },
+        _computeHash: function(seed) {
+          return md5(seed);
+        }
+      });
+    }());
+  </script>
+</dom-module>
+
